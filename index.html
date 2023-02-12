@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+
+    <title>Hotel Management Documentation</title>
+
+    <link rel="shortcut icon" href="images/logo.jpg" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+    <script>
+        var mybutton = document.getElementById("myBtn");
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+            document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector('#mode').addEventListener('click',()=>{
+                document.querySelector('html').classList.toggle('dark');
+            })
+        });
+
+
+    </script>
+
+    <div id="wrapper">
+
+        <div id="mode" >
+            <div class="dark">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>lightmode</title>
+                    <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+                </svg>
+            </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                </svg>
+            </div>
+        </div>
+
+        <div class="container">
+
+            <section id="top" class="section docs-heading">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Hotel Management Documentation</h1>
+                            <p class="lead">ESGI2022-23C-Vraiment-Pas-Cool-team-4
+</p>
+                        </div>
+                        <!-- end title -->
+                    </div>
+                    <!-- end 12 -->
+                </div>
+                <!-- end row -->
+
+                <hr>
+
+            </section>
+            <!-- end section -->
+
+            <div class="row">
+
+                <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+                            <li><a href="#line1">Getting Started</a></li>
+                            <li><a href="#line2">How to Install WordPress</a></li>
+                            <li><a href="#line3">How to Install Theme</a></li>
+                            <li><a href="#line4">Features</a></li>
+                            <li><a href="#line7">The distribution of work</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">Charbel</a></li>
+                                    <li><a href="#line7_2">Janin</a></li>
+                                    <li><a href="#line7_3">Andrei</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line9">Files & Sources</a></li>
+                            <li><a href="#line10">Conclusion</a></li>
+                            <li><a href="#line11">Copyright</a></li>
+                        </ul>
+                    </nav >
+                </div>
+                <div class="col-md-9">
+                    <section class="welcome">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                               <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Item Name : </strong><br>Hotel Management Program</li>
+                                                <li><strong>Item Version : </strong><br> v 1.0</li>
+                                                <li><strong>Authors  : </strong><br><a href="https://github.com/csalhabb" target="_blank">Charbel SALHAB</a>
+												<br></strong> <a href="https://github.com/Janin-Michel-Mathias" target="_blank">Janin MICHEL-MATHIAS</a>
+												<br></strong> <a href="https://github.com/diabolize-andi" target="_blank">Andrei MALICEK</a>
+												</li>
+                                                <li><strong>Github Repo : </strong> <br><a href="https://github.com/ESGI2022-23C-Vraiment-Pas-Cool-team-4" target="_blank">https://github.com/ESGI2022-23C-Vraiment-Pas-Cool-team-4</a></li>
+                                            </ul>
+                                        </div>
+
+                                        <hr>
+                                        <div>
+                                            <p>The purpose of this program is to allow the user to create a virtual hotel by specifying the number of rooms and the type of rooms offered, as well as the services offered. The user can then manage room reservations by customers according to the criteria of the hotel.
+											<br>The group is made up of three members: Charbel Salhab, Janin Michel-Mathias, Andrei Malicek.
+											<br>This project was carried out as part of our studies at ESGI and was supervised by our teacher, Mr. Yoni Firroloni.
+                                            </p>
+
+                                            <p>This documentation is to help you regarding each step of customization. Please go through the documentation carefully to understand how to install the program and use it.</p>
+
+                                            <h4>Requirements</h4>
+                                            <p>You will need the following sofwares to run the program.</p>
+                                            <ol>
+                                                <li>A C compiler: A C compiler is a software tool that converts your C code into machine-readable code that can be executed by a computer including GCC (GNU Compiler Collection)</li>
+                                                <li>An IDE (Integrated Development Environment): An IDE is a software application that provides a comprehensive environment for software development. An IDE typically includes a code editor, a compiler, and a debugger (Eg: Visual Studio Code, CLion).</li>
+                                                <li>The source code of the program you want to run.</li>
+                                            </ol>
+                                            <div class="intro2 clearfix">
+                                                <p><i class="fa fa-exclamation-triangle"></i> Be careful while reading the documentation.<br>Once you have these requirements, you can write, compile, and run C programs on your computer.
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- end row -->
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="line1" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Getting Started <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                                <h4>Bootstrap Grid System</h4>
+
+                                <pre class="brush: html; highlight: [2,4]">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                </div>
+                            </div></pre>
+
+                                <p>Our you can use the grid system with 2 columns like this;</p>
+
+                                <pre class="brush: html">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                </div>
+                            </div>
+                         </pre>
+
+                                <p>Our you can use the grid system with 3 columns like this;</p>
+
+                                <pre class="brush: html">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                    <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                                        YOUR CODES GOES HERE
+                                    </div>
+                                </div>
+                            </div>
+                         </pre>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line2" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">How to Install WordPress <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="intro2 clearfix">
+                            <p><i class="fa fa-wordpress"></i> Lorem the It is a long established fact that a reader will be distracted..
+                                <br> Please read more about WordPress here. <a href="#">WordPress Installation via FTP.</a> </p>
+                        </div>
+
+                        <hr>
+
+                        <h4>Upload via WordPress Admin</h4>
+
+                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-8 col-md-offset-2">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line3" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">How to Install Theme <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <h4>Upload via WordPress Admin</h4>
+
+                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+
+                        <hr>
+
+                        <h4>Upload via FTP Server</h4>
+
+                        <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                        <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/yQnQyI5WlKs" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                            <div class="col-md-6">
+                                <div class="media">
+                                    <iframe width="560" height="315" src="https://www.youtube.com/embed/z0kEVwJB_go" frameborder="0" allowfullscreen></iframe>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line4" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Features<hr></h2>
+                            </div>
+                    </section>
+                    <!-- end section -->
+
+
+                    <section id="line7" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Information on the distribution of work<hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+
+
+                            <div class="col-md-8">
+                                <h4 id="line7_1">Charbel SALHAB</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h4 id="line7_2">Janin MICHEL-MATHIAS</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <hr>
+
+                        <div class="row">
+
+                            <div class="col-md-8">
+                                <h4 id="line7_3">Andrei MALICEK</h4>
+                                <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. long established fact that a reader will English.</p>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                  
+
+                    <section id="line9" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Files & Sources <hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Included Stylesheets</strong>
+
+                                <p>These are the primary CSS files used for general front-end styling. Use these to customize your theme even further. All included JavaScript codes under <strong>yourthemename/css/</strong></p>
+
+                                <ul>
+                                    <li>1. style.css - Primary stylesheet</li>
+                                    <li>2. bootstrap.css - Bootstrap stylesheet</li>
+                                    <li>3. owl-carousel.css - OWL Carousel</li>
+                                    <li>4. fontawesome.css - FontAwesome Font Icons stylesheet</li>
+                                    <li>5. custom.css - Pathos Color Schemes stylesheet</li>
+                                    <li>6. prettyPhoto.css - Lightbox effect css file</li>
+                                    <li>7. flexslider.css - Flexslider css file</li>
+                                    <li>8. et-line.css - Elegant icons css file</li>
+                                    <li>9. carousel.css - OWL Carousel css file</li>
+                                    <li>10. animate.css - CSS3 animations css file</li>
+                                </ul>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <strong>Included JavaScript</strong>
+
+                                <p>These are the various attribution inks to the Javascript files included or modified to work with in this theme. All included JavaScript codes under <strong>yourthemename/js/</strong></p>
+
+                                <ul>
+                                    <li>1. bootstrap.js - Bootstrap JavaScript</li>
+                                    <li>2. custom.js - All JavaScript Plugins</li>
+                                    <li>3. retina.js - Retina JavaScript</li>
+                                    <li>4. jquery.js - Base JavaScript</li>
+                                    <li>5. prettyPhoto.js - Lightbox JavaScript</li>
+                                    <li>6. owl-carousel.js - Lightbox JavaScript</li>
+                                    <li>7. revslider.js - Revolution Slider JavaScript</li>
+                                    <li>8. flexslider.js - Flexslider JavaScript</li>
+                                    <li>9. awesome-grid.nin.js - Awesome grid portfolio JavaScript</li>
+                                    <li>10. circle.js - Coming soon page JavaScript</li>
+                                    <li>11. contact.js - Contact form validate JavaScript</li>
+                                    <li>12. isotope.js - Masonry Portfolio JavaScript</li>
+                                    <li>13. progress.js - Progress bar JavaScript</li>
+                                    <li>14. rotate.js - Text rotate effect JavaScript</li>
+                                    <li>15. wow.js - CSS3 animation JavaScript</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line10" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Conclusion<hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+
+                                <p>This program is a valuable tool for hotel owners who want to manage their hotel more efficiently. With its simple and intuitive interface, creating and managing a hotel has never been easier. Whether you're a seasoned hotel owner or just starting out, this program is designed to meet your needs and help you run your hotel smoothly and effectively.</p>
+
+                                <hr>
+<!--
+                                <h4>Changelog</h4>
+
+                                <pre class="brush: html">
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.8.4 - May 7th, 2015
+                                        -----------------------------------------------------------------------------------------
+
+                                        - new revolution slider plugin version
+                                        - fixed security issue with xss vulnerability
+                                        - improved demo importer for certain server environments
+                                        - updated WooCommerce template files for the outdated message in system status
+                                        - added suhosin check in system status 
+                                        - added information that explains ZipArchive is required on your server for importing demos 
+                                        - portfolio Grid template improvement
+                                        - added more information to demo popup message for individual demo requirements
+                                        - RTL style improvements
+                                        - breadcrumb function improved for various areas
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.8.3 - May 7th, 2015
+                                        -----------------------------------------------------------------------------------------
+                                        - fixed responsive / retina issue for larger logos
+                                        - fusion slider now uses responsive headings all the time
+                                        - dropped custom Avada styles for select boxes in IE since it is not supported
+                                        - fixed compatibility issue with Category Order and Taxonomy Terms Order plugin
+                                        - fixed issue of full width background being affected by padding options
+                                        - tested and fixed hellobar issue 
+                                        - typography settings now apply to single post pages
+                                        - improved smooth scroll in certain situations
+                                        - youtube & vimeo videos will show at normal size in light box as long as video embed link is not used
+                                        - fixed issue of â€œfixedâ€ featured image mode not working for carousels / recent work
+                                        - fixed issue of header tagline font not working with font options
+
+                                        -----------------------------------------------------------------------------------------
+                                        Version 3.8.2 - May 7th, 2015
+                                        -----------------------------------------------------------------------------------------
+                                        - fixed formatting issues with Turkish language files 
+                                        - letter spacing menu option improvement
+                                        - improved fusion slider max content width setting
+                                        - removed the â€œdisable first featured image on productsâ€ setting since it does not apply
+                                        - improved portfolio featured image loading
+                                        - removed encoding from tracking code, space before head, space before body, and custom CSS to stop it from parsing code within TO and removing special characters e.g. +
+                                        - woo login box now shows login fields for logged out users
+                                        - woo cart / my account links now show on mobile 
+                                        - fixed button styling issue with gravity forms
+
+
+                                      </pre>
+
+                            </div>-->
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+
+                    <section id="line11" class="section">
+
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Copyright<hr></h2>
+                            </div>
+                            <!-- end col -->
+                        </div>
+                        <!-- end row -->
+
+                        <div class="row">
+                            <div class="col-md-12">
+                                
+                                                   
+                             <p>2022-2023  </p>
+							 <p>&copy; Charbel SALHAB, Janin MICHEL-MATHIAS, Andrei MALICEK <b>2A2</p>
+                            
+                            </div>
+                        </div>
+                        <!-- end row -->
+
+                    </section>
+                    <!-- end section -->
+				</div>
+            </div>
+       </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+</body>
+</html>
