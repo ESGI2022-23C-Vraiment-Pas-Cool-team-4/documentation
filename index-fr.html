@@ -1,0 +1,336 @@
+<!--
+Créé par : Charbel SALHAB, Andrei MALICEK, Janin MICHEL-MATHIAS
+
+Date : 24/02/2023
+
+"programme permettant de créer votre propre hôtel avec le nombre de chambres et le type de chambre et les services proposés. Les chambres peuvent être réservées par les clients en fonction des critères de l'hôtel."
+
+Documentation de gestion hôtelière
+
+Version française
+-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title>Documentation de gestion hôtelière</title>
+    <link rel="shortcut icon" href="images/images.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/stroke.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shCore.css" media="all">
+    <link rel="stylesheet" type="text/css" href="js/syntax-highlighter/styles/shThemeRDark.css" media="all">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+</head>
+<body>
+	 <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+    <script>
+    var mybutton = document.getElementById("myBtn");
+    window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+         if (document.body.scrollTop > 1000 || document.documentElement.scrollTop > 1000) {
+               mybutton.style.display = "block";
+         } else {
+                mybutton.style.display = "none";
+         }
+   }
+   
+   function topFunction() {
+           window.scrollTo({ top: 0, behavior: 'smooth' })
+           document.documentElement.scrollTo({ top: 0, behavior: 'smooth' })
+   }
+
+	document.addEventListener("DOMContentLoaded", () => {
+       document.querySelector('#mode').addEventListener('click',()=>{
+       document.querySelector('html').classList.toggle('dark');
+       })
+    });
+    </script>
+    <div id="wrapper">
+      <div id="mode" >
+         <div class="dark">
+            <svg aria-hidden="true" viewBox="0 0 512 512">
+                <title>lightmode</title>
+                <path fill="currentColor" d="M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c13-6.5 13-24.7.2-31.1zm-155.9 106c-49.9 49.9-131.1 49.9-181 0-49.9-49.9-49.9-131.1 0-181 49.9-49.9 131.1-49.9 181 0 49.9 49.9 49.9 131.1 0 181z"></path>
+            </svg>
+         </div>
+            <div class="light">
+                <svg aria-hidden="true" viewBox="0 0 512 512">
+                    <title>darkmode</title>
+                    <path fill="currentColor" d="M283.211 512c78.962 0 151.079-35.925 198.857-94.792 7.068-8.708-.639-21.43-11.562-19.35-124.203 23.654-238.262-71.576-238.262-196.954 0-72.222 38.662-138.635 101.498-174.394 9.686-5.512 7.25-20.197-3.756-22.23A258.156 258.156 0 0 0 283.211 0c-141.309 0-256 114.511-256 256 0 141.309 114.511 256 256 256z"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="container">
+            <section id="top" class="section docs-heading">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="big-title text-center">
+                            <h1>Documentation de gestion hôtelière</h1>
+                            <p class="lead">ESGI2022-23C-Vraiment-Pas-Cool-team-4</p>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </section>
+			<div class="row">
+            <div class="col-md-3">
+                    <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
+                        <ul class="nav">
+						<li><a href="index-en.html">Version Anglaise</a></li>
+                            <li><a href="#line1">Commencer</a></li>
+                            <li><a href="#line2">Étapes pour installer le programme</a></li>
+                            <li><a href="#line4">Fonctionnalités</a></li>
+                            <li><a href="#line7">Répartition des tâches</a>
+                                <ul class="nav">
+                                    <li><a href="#line7_1">Charbel</a></li>
+                                    <li><a href="#line7_2">Janin</a></li>
+                                    <li><a href="#line7_3">Andrei</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#line9">Fichiers et sources</a></li>
+                            <li><a href="#line10">Conclusion</a></li>
+                            <li><a href="#line11">Droit d'auteur</a></li>
+                        </ul>
+                    </nav >
+                </div>
+				<div class="col-md-9">
+                    <section class="welcome">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                               <h2 class="dark-text">Introduction<hr></h2>
+                                <div class="row">
+                                    <div class="col-md-12 full">
+                                        <div class="intro1">
+                                            <ul>
+                                                <li><strong>Nom de l'élément : </strong><br>Programme de gestion hôtelière</li>
+                                                <li><strong>Version de l'élément : </strong><br> v 1.0</li>
+                                                <li><strong>Auteurs  : </strong><br><a href="https://github.com/csalhabb" target="_blank">Charbel SALHAB</a>
+												<br></strong> <a href="https://github.com/Janin-Michel-Mathias" target="_blank">Janin MICHEL-MATHIAS</a>
+												<br></strong> <a href="https://github.com/diabolize-andi" target="_blank">Andrei MALICEK</a>
+												</li>
+                                                <li><strong>Dépôt Github : </strong> <br><a href="https://github.com/ESGI2022-23C-Vraiment-Pas-Cool-team-4" target="_blank">https://github.com/ESGI2022-23C-Vraiment-Pas-Cool-team-4</a></li>
+                                            </ul>
+                                        </div>
+                                        <hr>
+                                        <div>
+                                            <p>Le but de ce programme est de permettre à l'utilisateur de créer un hôtel virtuel en spécifiant le nombre de chambres et le type de chambres proposé, ainsi que les services offerts. L'utilisateur peut ensuite gérer les réservations de chambres par les clients en fonction des critères de l'hôtel.
+											<br>Le groupe est composé de trois membres : Charbel Salhab, Janin Michel-Mathias, Andrei Malicek.
+											<br>Ce projet a été réalisé dans le cadre de nos études à l'ESGI et a été supervisé par notre enseignant, M. Yoni Firroloni.
+                                            </p>
+                                            <p>Cette documentation est destinée à vous aider pour chaque étape de personnalisation. Veuillez lire attentivement la documentation pour comprendre comment installer le programme et l'utiliser.</p>
+                                            <h4>Exigences</h4>
+                                            <p>Vous aurez besoin des logiciels suivants pour exécuter le programme.</p>
+                                            <ol>
+                                                <li>Un compilateur C : un compilateur C est un outil logiciel qui convertit votre code C en code lisible par une machine qui peut être exécuté par un ordinateur, notamment GCC (GNU Compiler Collection).</li>
+                                                <li>Un IDE (Environnement de développement intégré) : un IDE est une application logicielle qui fournit un environnement complet pour le développement de logiciels. Un IDE comprend généralement un éditeur de code, un compilateur et un débogueur (par exemple, Visual Studio Code, CLion).</li>
+                                                <li>Le code source du programme que vous souhaitez exécuter.</li><br>
+                                            </ol>
+											<div class="intro2 clearfix">
+											<p><i class="fa fa-exclamation-triangle"></i> Soyez attentif en lisant la documentation. <br>Une fois que vous avez ces exigences, 
+											vous pouvez écrire, compiler et exécuter des programmes en C sur votre ordinateur.</p>
+										</div><br>
+									</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+					<section id="line1" class="section">
+					<div class="row">
+        <div class="col-md-12 left-align">
+            <h2 class="dark-text">Commencer <hr></h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <p>Pour installer le programme, vous devez d'abord télécharger les fichiers d'installation depuis notre <a href="https://github.com/ESGI2022-23C-Vraiment-Pas-Cool-team-4" target="_blank">répertoire GitHub</a>. Assurez-vous d'avoir les dépendances nécessaires, telles que la bibliothèque GTK, pour exécuter le programme. Pour plus d'informations sur la configuration du programme, veuillez vous référer au manuel d'installation fourni ci-dessous. <br>
+            <br>Pour utiliser le programme, vous devez d'abord ouvrir l'application et vous connecter avec vos identifiants. Ensuite, vous pouvez accéder à différentes fonctionnalités telles que la réservation, l'édition et la suppression des informations client. Pour réserver une chambre, par exemple, vous devez sélectionner la date d'arrivée et de départ, ainsi que le type de chambre souhaité. Une fois que vous avez terminé, vous pouvez enregistrer la réservation et afficher les informations du client.</p>
+            <h4>Système de grille Bootstrap</h4>
+            <pre class="brush: html; highlight: [2,4]">
+            <!-- <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        VOTRE CODE VA ICI
+                    </div>
+                </div>
+            </div> -->
+            </pre>
+        </div>
+    </div>
+</section>
+			<section id="line2" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Étapes pour installer le programme <hr></h2>
+                            </div>
+                        </div>
+<!--
+                        <div class="intro2 clearfix">
+                            <p><i class="fa fa-wordpress"></i> Lorem the It is a long established fact that a reader will be distracted..
+                                <br> Please read more about WordPress here. <a href="#">WordPress Installation via FTP.</a> </p>
+                        </div>
+						                    <hr>
+
+                    <h4>Upload via WordPress Admin</h4>
+
+                    <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
+
+                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="media">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                        </div>
+
+                    </div>
+-->
+</section>
+<section id="line4" class="section">
+<div class="row">
+<div class="col-md-12 left-align">
+<h2 class="dark-text">Fonctionnalités<hr></h2>
+</div>
+</div>
+<p>1. Interface graphique: Le programme utilise GTK, une bibliothèque open-source populaire, pour son interface graphique, offrant une interface conviviale et visuellement attrayante pour interagir avec le programme.<br>
+2. Gestion de base de données: Le programme utilise SQL pour la gestion de base de données, fournissant un moyen robuste et efficace de stocker et récupérer des données. <br>
+3. Hébergement du serveur: Le serveur du programme est hébergé sur un serveur privé virtuel (VPS), offrant une solution d'hébergement sécurisée et fiable pour le programme.<br>
+4. Communication sécurisée: Le programme utilise la programmation de sockets pour la communication client-serveur, garantissant un transfert de données sécurisé et efficace entre le client et le serveur.<br>
+5. Gestion des données: Le programme fournit une solution complète pour la gestion des données, y compris l'analyse des données, le stockage des données et la récupération des données, ce qui facilite l'accès et la gestion des informations clients pour les gérants d'hôtels.<br>
+6. Enregistrement des transactions : Le programme comprend un système d'enregistrement des transactions, permettant aux gestionnaires d'hôtels de suivre toutes les transactions et d'accéder aux informations de transactions passées selon les besoins.<br><br>
+En général, le programme fournit une solution riche en fonctionnalités pour gérer un hôtel, comprenant une interface graphique, une gestion de base de données, une communication sécurisée, une gestion des données et un enregistrement des transactions.
+</p>
+</section>
+<section id="line7" class="section">
+<div class="row">
+<div class="col-md-12 left-align">
+<h2 class="dark-text">Information sur la distribution du travail<hr></h2>
+</div>
+</div>
+<div class="row">
+<div class="col-md-8">
+<h4 id="line7_1">Charbel SALHAB</h4>
+<p>1. Création de sockets clients, de sockets serveur et de sockets des logs : Le programme comprend la création de sockets clients pour la communication entre 
+le client et le serveur, de sockets serveur pour écouter les requetes des clients, et de sockets d'enregistrement pour suivre toutes les transactions.<br>
+ 						2. Types de requetes : Différents types de requetes ont été créés dans le programme pour gérer diverses tâches telles que la réservation d'une chambre, la vérification de la disponibilité des chambres, la vérification des détails des clients, etc.<br>
+ 						2. Types de requetes : Différents types de requetes ont été créés dans le programme pour gérer diverses tâches telles que la réservation d'une chambre, la vérification de la disponibilité des chambres, la vérification des détails des clients, etc.<br>
+
+ 						3. Analyse des requetes : Lorsqu'une demande est reçue, le programme l'analyse pour extraire les informations nécessaires. Ces informations sont ensuite utilisées pour effectuer la tâche demandée.<br>
+
+ 						4. Détection des requetes et association aux fonctions : Le programme détecte le type de demande et l'associe à la fonction correspondante. Cette fonction utilise ensuite les informations obtenues à l'étape 3 pour effectuer la tâche demandée.</p>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class="row">
+                     <div class="col-md-8">
+                         <h4 id="line7_2">Janin MICHEL-MATHIAS</h4>
+                         <p>1. Création de l'interface graphique du programme.<br>Utilisation de Glade, un outil de conception d'interface utilisateur, ainsi que de la bibliothèque GTK pour la programmation d'interfaces.</p>
+                     </div>
+                 </div>
+                 <hr>
+                 <div class="row">
+                     <div class="col-md-8">
+                         <h4 id="line7_3">Andrei MALICEK</h4>
+                         <p>1. Développement du côté client du programme de gestion de l'hôtellerie, axé sur la gestion de la base de données.<br>
+ 						2. Conception et mise en œuvre de la structure de la base de données pour stocker les informations des clients, telles que les noms, les adresses et les réservations.<br>
+ 						3. Programmation de requêtes pour accéder et modifier les données dans la base de données.
+								<br>Le programme de gestion hôtelière peut offrir des fonctionnalités pour la réservation, la modification et la suppression des informations des clients, offrant ainsi une expérience complète et efficace aux utilisateurs.</p>
+                            </div>
+                        </div>
+                    </section>
+<section id="line9" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Fichiers et sources <hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Fichiers inclus</strong>
+                                <p>Il s'agit des fichiers principaux de notre projet. Vous pouvez trouver tous les fichiers utilisés sur <strong>le référentiel Git mentionné ci-dessus.</strong></p>
+                                <ul>
+								<li>Serveur : </li>
+                                    <li>1. </li>
+                                    <li>2. </li>
+                                    <li>3. </li>
+                                    <li>4. </li>
+                                    <li>5. </li>
+                                    <li>6. </li>
+                                    <li>7. </li>
+                                    <li>8. </li>
+                                    <li>9. </li>
+                                    <li>10. </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <strong>Fichiers inclus ou modifiés</strong>
+                                <p>Il s'agit des différents fichiers inclus ou modifiés pour fonctionner. Tous les codes C inclus se trouvent sous <strong>le référentiel Git mentionné ci-dessus.</strong></p>
+                                <ul>
+								<li>Client : </li>
+                                    <li>1. </li>
+                                    <li>2. </li>
+                                    <li>3. </li>
+                                    <li>4. </li>
+                                    <li>5. </li>
+                                    <li>6. </li>
+                                    <li>7. </li>
+                                    <li>8. </li>
+                                    <li>9. </li>
+                                    <li>10. </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="line10" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Conclusion<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <p>Ce programme est un outil précieux pour les propriétaires d'hôtels qui souhaitent gérer leur hôtel de manière plus efficace. Avec son interface simple et intuitive, créer et gérer un hôtel n'a jamais été aussi facile. Que vous soyez un propriétaire d'hôtel expérimenté ou que vous commenciez tout juste, ce programme est conçu pour répondre à vos besoins et vous aider à gérer votre hôtel en douceur et efficacement.</p>
+                                <hr>
+                        </div>
+                    </section>
+	<section id="line11" class="section">
+                        <div class="row">
+                            <div class="col-md-12 left-align">
+                                <h2 class="dark-text">Droit d'auteur<hr></h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">                      
+                             <p>2022-2023  </p>
+							 <p>&copy; Charbel SALHAB, Janin MICHEL-MATHIAS, Andrei MALICEK <b>2A2</p>
+                            </div>
+                        </div>
+                    </section>
+				</div>
+            </div>
+		</div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/retina.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/syntax-highlighter/scripts/shCore.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushXml.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushCss.js"></script>
+    <script src="js/syntax-highlighter/scripts/shBrushJScript.js"></script>
+</body>
+</html>
