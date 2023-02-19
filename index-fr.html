@@ -85,7 +85,7 @@ Version française
             <div class="col-md-3">
                     <nav class="docs-sidebar" data-spy="affix" data-offset-top="300" data-offset-bottom="200" role="navigation">
                         <ul class="nav">
-						<li><a href="index-en.html">Version Anglaise</a></li>
+
                             <li><a href="#line1">Commencer</a></li>
                             <li><a href="#line2">Étapes pour installer le programme</a></li>
                             <li><a href="#line4">Fonctionnalités</a></li>
@@ -96,7 +96,7 @@ Version française
                                     <li><a href="#line7_3">Andrei</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#line9">Fichiers et sources</a></li>
+                            <li><a href="#line9">Difficultés rencontrées</a></li>
                             <li><a href="#line10">Conclusion</a></li>
                             <li><a href="#line11">Droit d'auteur</a></li>
                         </ul>
@@ -156,14 +156,6 @@ Version française
             <br>Pour utiliser le programme, vous devez d'abord ouvrir l'application et vous connecter avec vos identifiants. Ensuite, vous pouvez accéder à différentes fonctionnalités telles que la réservation, l'édition et la suppression des informations client. Pour réserver une chambre, par exemple, vous devez sélectionner la date d'arrivée et de départ, ainsi que le type de chambre souhaité. Une fois que vous avez terminé, vous pouvez enregistrer la réservation et afficher les informations du client.</p>
             <h4>Système de grille Bootstrap</h4>
             <pre class="brush: html; highlight: [2,4]">
-            <!-- <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        VOTRE CODE VA ICI
-                    </div>
-                </div>
-            </div> -->
-            </pre>
         </div>
     </div>
 </section>
@@ -173,28 +165,8 @@ Version française
                                 <h2 class="dark-text">Étapes pour installer le programme <hr></h2>
                             </div>
                         </div>
-<!--
-                        <div class="intro2 clearfix">
-                            <p><i class="fa fa-wordpress"></i> Lorem the It is a long established fact that a reader will be distracted..
-                                <br> Please read more about WordPress here. <a href="#">WordPress Installation via FTP.</a> </p>
-                        </div>
-						                    <hr>
+						<p>Le client ne fonctionne que sur Windows. Et le serveur fonctionne sur Linux. Comme pré-requis, il vous faut mysql sur Linux pour le bon fonctionnement.</p>
 
-                    <h4>Upload via WordPress Admin</h4>
-
-                    <p>Lorem the It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.</p>
-
-                    <a href="#" class="btn btn-primary">Get a Installation Service</a> <a href="#" class="btn btn-info">Ask a Question</a>
-                    <hr>
-                    <div class="row">
-                        <div class="col-md-8 col-md-offset-2">
-                            <div class="media">
-                                <iframe width="560" height="315" src="https://www.youtube.com/embed/snFzbPm_RUE" frameborder="0" allowfullscreen></iframe>
-                            </div>
-                        </div>
-
-                    </div>
--->
 </section>
 <section id="line4" class="section">
 <div class="row">
@@ -202,13 +174,12 @@ Version française
 <h2 class="dark-text">Fonctionnalités<hr></h2>
 </div>
 </div>
-<p>1. Interface graphique: Le programme utilise GTK, une bibliothèque open-source populaire, pour son interface graphique, offrant une interface conviviale et visuellement attrayante pour interagir avec le programme.<br>
-2. Gestion de base de données: Le programme utilise SQL pour la gestion de base de données, fournissant un moyen robuste et efficace de stocker et récupérer des données. <br>
+<p>1. Interface graphique: Le programme utilise Windows API, une bibliothèque open-source populaire, pour son interface graphique, offrant une interface conviviale et visuellement attrayante pour interagir avec le programme.<br>
+2. Gestion de base de données: Le programme utilise Mariadb pour la gestion de base de données, fournissant un moyen robuste et efficace de stocker et récupérer des données. <br>
 3. Hébergement du serveur: Le serveur du programme est hébergé sur un serveur privé virtuel (VPS), offrant une solution d'hébergement sécurisée et fiable pour le programme.<br>
-4. Communication sécurisée: Le programme utilise la programmation de sockets pour la communication client-serveur, garantissant un transfert de données sécurisé et efficace entre le client et le serveur.<br>
 5. Gestion des données: Le programme fournit une solution complète pour la gestion des données, y compris l'analyse des données, le stockage des données et la récupération des données, ce qui facilite l'accès et la gestion des informations clients pour les gérants d'hôtels.<br>
 6. Enregistrement des transactions : Le programme comprend un système d'enregistrement des transactions, permettant aux gestionnaires d'hôtels de suivre toutes les transactions et d'accéder aux informations de transactions passées selon les besoins.<br><br>
-En général, le programme fournit une solution riche en fonctionnalités pour gérer un hôtel, comprenant une interface graphique, une gestion de base de données, une communication sécurisée, une gestion des données et un enregistrement des transactions.
+En général, le programme fournit une solution riche en fonctionnalités pour gérer un hôtel, comprenant une interface graphique, une gestion de base de données, une gestion des données et un enregistrement des transactions.
 </p>
 </section>
 <section id="line7" class="section">
@@ -220,32 +191,21 @@ En général, le programme fournit une solution riche en fonctionnalités pour g
 <div class="row">
 <div class="col-md-8">
 <h4 id="line7_1">Charbel SALHAB</h4>
-<p>1. Création de sockets clients, de sockets serveur et de sockets des logs : Le programme comprend la création de sockets clients pour la communication entre 
-le client et le serveur, de sockets serveur pour écouter les requetes des clients, et de sockets d'enregistrement pour suivre toutes les transactions.<br>
- 						2. Types de requetes : Différents types de requetes ont été créés dans le programme pour gérer diverses tâches telles que la réservation d'une chambre, la vérification de la disponibilité des chambres, la vérification des détails des clients, etc.<br>
- 						2. Types de requetes : Différents types de requetes ont été créés dans le programme pour gérer diverses tâches telles que la réservation d'une chambre, la vérification de la disponibilité des chambres, la vérification des détails des clients, etc.<br>
-
- 						3. Analyse des requetes : Lorsqu'une demande est reçue, le programme l'analyse pour extraire les informations nécessaires. Ces informations sont ensuite utilisées pour effectuer la tâche demandée.<br>
-
- 						4. Détection des requetes et association aux fonctions : Le programme détecte le type de demande et l'associe à la fonction correspondante. Cette fonction utilise ensuite les informations obtenues à l'étape 3 pour effectuer la tâche demandée.</p>
+<p>Sockets et gestion de la communication serveur/ client.</p>
                      </div>
                  </div>
                  <hr>
                  <div class="row">
                      <div class="col-md-8">
                          <h4 id="line7_2">Janin MICHEL-MATHIAS</h4>
-                         <p>1. Création de l'interface graphique du programme.<br>Utilisation de Glade, un outil de conception d'interface utilisateur, ainsi que de la bibliothèque GTK pour la programmation d'interfaces.</p>
+                         <p>Interface Graphique (windows api).</p>
                      </div>
                  </div>
                  <hr>
                  <div class="row">
                      <div class="col-md-8">
                          <h4 id="line7_3">Andrei MALICEK</h4>
-                         <p>1. Développement du côté client du programme de gestion de l'hôtellerie, axé sur la gestion de la base de données.<br>
- 						2. Conception et mise en œuvre de la structure de la base de données pour stocker les informations des clients, telles que les noms, les adresses et les réservations.<br>
- 						3. Programmation de requêtes pour accéder et modifier les données dans la base de données.
-								<br>Le programme de gestion hôtelière peut offrir des fonctionnalités pour la réservation, la modification et la suppression des informations des clients, offrant ainsi une expérience complète et efficace aux utilisateurs.</p>
-                            </div>
+                         <p>Initialisation du programme, gestion entiere de la bdd, creation de fichiers de config, reception et traitement des requetes.</div></p>
                         </div>
                     </section>
 <section id="line9" class="section">
@@ -255,41 +215,10 @@ le client et le serveur, de sockets serveur pour écouter les requetes des clien
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-6">
-                                <strong>Fichiers inclus</strong>
-                                <p>Il s'agit des fichiers principaux de notre projet. Vous pouvez trouver tous les fichiers utilisés sur <strong>le référentiel Git mentionné ci-dessus.</strong></p>
-                                <ul>
-								<li>Serveur : </li>
-                                    <li>1. </li>
-                                    <li>2. </li>
-                                    <li>3. </li>
-                                    <li>4. </li>
-                                    <li>5. </li>
-                                    <li>6. </li>
-                                    <li>7. </li>
-                                    <li>8. </li>
-                                    <li>9. </li>
-                                    <li>10. </li>
-                                </ul>
-                            </div>
-                            <div class="col-md-6">
-                                <strong>Fichiers inclus ou modifiés</strong>
-                                <p>Il s'agit des différents fichiers inclus ou modifiés pour fonctionner. Tous les codes C inclus se trouvent sous <strong>le référentiel Git mentionné ci-dessus.</strong></p>
-                                <ul>
-								<li>Client : </li>
-                                    <li>1. </li>
-                                    <li>2. </li>
-                                    <li>3. </li>
-                                    <li>4. </li>
-                                    <li>5. </li>
-                                    <li>6. </li>
-                                    <li>7. </li>
-                                    <li>8. </li>
-                                    <li>9. </li>
-                                    <li>10. </li>
-                                </ul>
-                            </div>
-                        </div>
+                                <strong>Difficultés rencontrées</strong>
+                                <p>Aucune connaissance en utilisation de mysql en C, ainsi que des sockets ce qui nous a permis de les apprendre
+							afin de les utiliser dans notre projet.</p>
+ 
                     </section>
                     <section id="line10" class="section">
                         <div class="row">
